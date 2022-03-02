@@ -8,9 +8,30 @@
     "@truffle/hdwallet-provider": "^1.4.0",
     "dotenv": "^10.0.0",
     "fs": "^0.0.1-security",
+    "hardhat": "^2.6.7",
     "web3": "^1.5.0"
   },
   "devDependencies": {
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
     "truffle-plugin-verify": "^0.5.15"
+  },
+  "scripts": {
+    "prettier": "prettier --write './contracts/**/*.sol'"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.sol",
+        "options": {
+          "printWidth": 80,
+          "tabWidth": 4,
+          "useTabs": false,
+          "singleQuote": false,
+          "bracketSpacing": false,
+          "explicitTypes": "always"
+        }
+      }
+    ]
   }
 }
