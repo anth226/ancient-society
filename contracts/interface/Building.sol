@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-interface Building {
-
+interface IBuilding {
+    function mint(address player) external payable returns(uint256);
 }

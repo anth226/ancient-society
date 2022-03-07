@@ -35,8 +35,8 @@ module.exports = {
 
   networks: {
     development: {
-      host: "localhost",
-      port: 7545,
+      host: "127.0.0.1",
+      port: 8545,
       gas: 5000000,
       network_id: "*", // Match any network id
     },
@@ -58,6 +58,9 @@ module.exports = {
       gasPrice: 5000000000,
       confirmations: 2,
     },
+    dashboard: {
+      port: 24012,
+    }
   },
 
   // Set default mocha options here, use special reporters etc.
