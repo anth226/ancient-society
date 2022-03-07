@@ -52,7 +52,7 @@ contract Townhall is ERC721, Ownable, IBuilding {
         _fatherContract = fatherContract_;
     }
 
-    function faterContract() public view returns(address) {
+    function fatherContract() public view returns(address) {
         return _fatherContract;
     }
 

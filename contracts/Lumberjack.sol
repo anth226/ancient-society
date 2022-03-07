@@ -12,7 +12,7 @@ import "./interface/Building.sol";
 
 // Helper functions OpenZeppelin provides.
 
-contract Lumberjack is ERC721, Ownable, Building {
+contract Lumberjack is ERC721, Ownable, IBuilding {
     uint256 private constant INITIAL_PRICE = 1;
 
     string private baseURI;
@@ -52,11 +52,11 @@ contract Lumberjack is ERC721, Ownable, Building {
         _fatherContract = fatherContract_;
     }
 
-    function faterContract() public view returns(address) {
+    function fatherContract() public view returns(address) {
         return _fatherContract;
     }
 
-    function mint(address player) public payable returns (uint256) {
+    function mint(address player) external override payable returns (uint256) {
         
         uint256 mintPrice;
         
